@@ -1,6 +1,6 @@
 {
     "name": "home_cdn",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Upload files to local network on host machine no over complicated bs file transfer only",
     "keywords": [
         "cdn",
