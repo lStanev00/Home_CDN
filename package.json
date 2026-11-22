@@ -1,0 +1,25 @@
+{
+    "name": "home_cdn",
+    "version": "0.0.1",
+    "description": "Upload files to local network on host machine no over complicated bs file transfer only",
+    "keywords": [
+        "cdn",
+        "local"
+    ],
+    "license": "MIT",
+    "author": "Lachezar Stanev",
+    "type": "module",
+    "main": "server.js",
+    "scripts": {
+        "dev": "tsx watch src/server.ts",
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.6",
+        "@types/node": "^26.6.6",
+        "tsx": "^4.23.15",
+        "typescript": "^7.0.2"
+    }
+}
