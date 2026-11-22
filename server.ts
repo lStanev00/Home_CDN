@@ -9,7 +9,7 @@ import { pipeline } from "node:stream/promises";
 const app = express();
 const port = Number(process.env.PORT ?? 3000);
 const frontendDirectory = resolve("frontend");
-const publicDirectory = resolve(process.env.PUBLIC || "public");
+const publicDirectory = resolve(process.env.HOME_CDN_PUBLIC || "public");
 const uploadDirectory = join(publicDirectory, ".uploads");
 
 await mkdir(uploadDirectory, { recursive: true });
@@ -129,6 +129,7 @@ server.once("listening", () => {
 
     console.log(`Home CDN is listening on port ${address.port}`);
     console.log(`  Local: http://localhost:${address.port}`);
+    console.log(`  Storage: ${publicDirectory}`);
 
     for (const [name, interfaces] of Object.entries(networkInterfaces())) {
         for (const entry of interfaces ?? []) {

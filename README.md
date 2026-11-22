@@ -19,7 +19,7 @@ npm run dev
 
 Open `http://localhost:3000` to upload, browse, and download files. To connect from another device on the same network, use the URL printed at startup for the host computer's Wi-Fi or Ethernet adapter.
 
-Both run commands read `.env` when it exists. Copy `.env.example` to `.env` to change the settings. `PORT` defaults to `3000`. `PUBLIC` is the storage directory and defaults to `public/`. Relative paths are resolved from the project root, and the server creates the directory on startup.
+Both run commands read `.env` when it exists. Copy `.env.example` to `.env` to change the settings. `PORT` defaults to `3000`. `HOME_CDN_PUBLIC` sets the storage directory and defaults to `public/`. Relative paths are resolved from the project root. The server creates the directory and prints its full path at startup.
 
 To run the compiled server, build it first.
 
