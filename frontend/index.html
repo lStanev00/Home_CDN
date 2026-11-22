@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home CDN</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script type="module" src="/assets/files.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="/">
+                <span class="brand-icon" aria-hidden="true">▤</span>
+                Home CDN
+            </a>
+        </div>
+    </header>
+    <main>
+        <section aria-labelledby="upload-heading">
+            <h1 id="upload-heading">Upload files</h1>
+            <form id="upload-form" class="upload-card">
+                <label for="file-input">Choose files to send to this computer</label>
+                <div class="upload-controls">
+                    <input id="file-input" type="file" multiple required>
+                    <button class="primary" type="submit">Upload files</button>
+                </div>
+                <p id="upload-status" class="status" role="status"></p>
+            </form>
+        </section>
+
+        <section aria-labelledby="files-heading">
+            <div class="section-heading">
+                <h2 id="files-heading">File explorer</h2>
+                <button id="refresh" type="button">Refresh</button>
+            </div>
+            <div class="file-card">
+                <div class="file-toolbar">
+                    <label class="visually-hidden" for="file-search">Search files</label>
+                    <input id="file-search" type="search" placeholder="Search files" autocomplete="off">
+                    <span id="file-count"></span>
+                </div>
+                <p id="file-status" class="file-status" role="status">Loading files…</p>
+                <ul id="file-list" aria-label="Saved files" hidden></ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

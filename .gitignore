@@ -10,6 +10,10 @@ dist/
 .env.*
 !.env.example
 
+# Uploaded files
+/public/*
+!/public/.gitkeep
+
 # Logs
 *.log
 npm-debug.log*

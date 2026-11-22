@@ -11,9 +11,9 @@
     "type": "module",
     "main": "dist/server.js",
     "scripts": {
-        "dev": "tsx watch server.ts",
+        "dev": "tsx watch --env-file-if-exists=.env server.ts",
         "build": "tsc",
-        "start": "node dist/server.js",
+        "start": "node --env-file-if-exists=.env dist/server.js",
         "typecheck": "tsc --noEmit"
     },
     "devDependencies": {
@@ -21,5 +21,8 @@
         "@types/node": "^26.6.6",
         "tsx": "^4.23.15",
         "typescript": "^7.0.2"
+    },
+    "dependencies": {
+        "express": "^5.3.0"
     }
 }
